@@ -4,11 +4,17 @@ var number_of_images = 10;
 var button_back = document.getElementById('button-back');
 var button_next = document.getElementById('button-next');
 
-function setImageWidth() {
+function setDivWidth() {
     var image_div = document.getElementById('images'); 
-    var width = Math.floor(image_div.clientHeight * 0.772727273);
+    var control_left = document.getElementById('control-left');
+    var control_right = document.getElementById('control-right');
 
-    image_div.style.width = width.toString() + "px";
+    var image_width = Math.floor(image_div.clientHeight * 0.772727273);
+    var control_width = Math.floor((window.innerWidth - image_width) / 2);
+
+    image_div.style.width = image_width.toString() + "px";
+    control_left.style.width = control_width.toString() + "px";
+    control_right.style.width = control_width.toString() + "px";
 };
 
 var images = [
@@ -71,8 +77,8 @@ function handleNextClick() {
     
 }
 
-setImageWidth();
-window.addEventListener('resize', setImageWidth);
+setDivWidth();
+window.addEventListener('resize', setDivWidth);
 
 loadImage(0);
 button_back.addEventListener("click", handleBackClick);

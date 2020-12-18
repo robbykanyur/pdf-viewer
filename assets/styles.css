@@ -20,7 +20,7 @@ body {
     background: #28363A;
     display: flex;
     justify-content: center;
-    padding-top: 13px;
+    padding-top: 12px;
 }
 
 #logo {
@@ -29,7 +29,7 @@ body {
 
 #content {
     position: relative;
-    padding: 160px 0 80px;
+    padding: 120px 0 95px;
     height: 100vh;
 }
 
@@ -38,7 +38,6 @@ body {
     margin: 0 auto;
     height: 100%;
     overflow: hidden;
-    z-index: 5000;
 }
 
 #content .image-div {
@@ -59,18 +58,23 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
+    top: 0;
 }
 
 #controls .button {
     display: block;
-    width: 200px;
-    text-align: center;
-    color: white;
-    background: black;
-    height: 80px;
-    padding: 40px 0 60px;
+    position: relative;
+    width: 52px;
+    height: 0;
+    padding-top: 52px;
+    overflow: hidden;
+    background-image: url(../img/arrow-white.png);
+    background-size: cover;
     cursor: pointer;
-    margin: 0 30px;
+}
+
+#button-back {
+    transform: rotate(180deg);
 }
 
 #controls-align {
@@ -79,12 +83,22 @@ body {
     justify-content: space-between;
 }
 
+#control-left div{
+    float: right;
+    margin-right: 48px;
+}
+
+#control-right div {
+    float: left;
+    margin-left: 48px;
+}
+
 #status {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #ddd;
-    padding: 15px;
+    position: relative;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
 }
 
 #loading-container {
@@ -96,7 +110,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 4000;
 }
 
 .loading-ring {
@@ -119,6 +132,23 @@ body {
     border-color: #fff transparent transparent transparent;
 }
 
+#texture {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: url(../img/tex-grunge.png);
+    background-repeat: repeat;
+    opacity: 0.2;
+}
+
+#controls { z-index: 8000 }
+#logo { z-index: 8000 }
+.image-div { z-index: 7000 }
+#loading-container { z-index: 6000 }
+#texture { z-index: 5000 }
+
 .loading-ring div:nth-child(1) {
     animation-delay: -0.45s;
 }
@@ -139,4 +169,3 @@ body {
         transform: rotate(360deg);
     }
 }
-  
