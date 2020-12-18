@@ -20,7 +20,7 @@ function setDivWidth() {
     } else {
         image_div.style.width = "100vw";
         calculated_width = image_div.offsetWidth;
-        image_div.style.height = Math.floor((calculated_width / 0.772727273)) + "px";
+        image_div.style.height = Math.floor((calculated_width / 0.772727273)).toString() + "px";
     }
 };
 
