@@ -191,7 +191,12 @@ body {
         top: auto;
         bottom: 0;
         height: 92px;
-        padding: 0 30px;
+        padding: 0;
+    }
+
+    #controls-align {
+        display: flex;
+        justify-content: space-evenly;
     }
 
     #status {
@@ -200,6 +205,16 @@ body {
         bottom: 0;
         height: 92px;
         padding-top: 38px;
+    }
+
+    #controls .spacer {
+        width: 110px;
+    }
+
+    #control-right div,
+    #control-left div {
+        margin: 0;
+        float: none;
     }
 
 }
