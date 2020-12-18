@@ -6,12 +6,9 @@ var button_next = document.getElementById('button-next');
 
 function setDivWidth() {
     var image_div = document.getElementById('images'); 
-    var controls = document.getElementById('controls');
-    var status = document.getElementById('status');
-    var header = document.getElementById('header');
     var control_left = document.getElementById('control-left');
     var control_right = document.getElementById('control-right');
-    var calculated_width, controls_height, image_width, control_width;
+    var calculated_width, image_width, control_width;
 
     if(window.innerWidth >= 768) {
         image_width = Math.floor(image_div.clientHeight * 0.772727273);
@@ -24,11 +21,6 @@ function setDivWidth() {
         image_div.style.width = "100vw";
         calculated_width = image_div.offsetWidth;
         image_div.style.height = Math.floor((calculated_width / 0.772727273)) + "px";
-
-        controls_height = Math.floor(window.innerHeight - header.offsetHeight - image_div.offsetHeight);
-        controls.style.height = controls_height.toString() + "px";
-        status.style.height = controls_height.toString() + "px";
-        status.style.paddingTop = (controls_height / 2 - 8).toString() + "px";
     }
 };
 
