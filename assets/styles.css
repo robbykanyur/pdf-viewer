@@ -169,3 +169,31 @@ body {
         transform: rotate(360deg);
     }
 }
+
+@media only screen and (max-width: 768px) {
+
+    #header {
+        height: 60px;
+    }
+
+    #logo {
+        width: 114px;
+    }
+
+    #content {
+        padding: 60px 0;
+    }
+
+    #controls {
+        position: relative;
+        height: 52px;
+        padding: 0 30px;
+    }
+
+    #status {
+        position: absolute;
+        bottom: 0;
+        padding-top: 0;
+    }
+
+}
