@@ -4,6 +4,13 @@ var number_of_images = 10;
 var button_back = document.getElementById('button-back');
 var button_next = document.getElementById('button-next');
 
+function setImageWidth() {
+    var image_div = document.getElementById('images'); 
+    var width = Math.floor(image_div.clientHeight * 0.772727273);
+
+    image_div.style.width = width.toString() + "px";
+};
+
 var images = [
     'img/01-front.jpg',
     'img/02-about.jpg',
@@ -26,8 +33,6 @@ function loadImage(counter) {
         i.src = images[counter];
     }
 };
-
-loadImage(0);
 
 function updateStatus() {
     status_div = document.getElementById('current-page');
@@ -66,5 +71,9 @@ function handleNextClick() {
     
 }
 
+setImageWidth();
+window.addEventListener('resize', setImageWidth);
+
+loadImage(0);
 button_back.addEventListener("click", handleBackClick);
 button_next.addEventListener("click", handleNextClick);

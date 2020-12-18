@@ -7,15 +7,36 @@ body {
     padding: 0;
     height: 100vh;
     max-width: 100vw;
-    background: black;
+    background: #324448;
+    font-family: 'Museo Sans';
+}
+
+#header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    background: #28363A;
+    display: flex;
+    justify-content: center;
+    padding-top: 13px;
+}
+
+#logo {
+    width: 160px;
 }
 
 #content {
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 160px 0 80px;
     height: 100vh;
-    width: 77.2vh;
+}
+
+#images {
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
     overflow: hidden;
     z-index: 5000;
 }
